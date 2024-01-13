@@ -3,6 +3,6 @@
  */
 const nextConfig = {
     output: 'export',
-    basePath:'/PortFolio'
+    //basePath:'/PortFolio'
     }
     module.exports = nextConfig
