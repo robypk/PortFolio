@@ -6,7 +6,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({}) => {
   return (
-    <section className="relative bg-gradient-to-t from-white to-green-300 text-white h-screen ">
+    <section className="relative text-white h-screen ">
       <div className=" flex items-center justify-center p-6 md:p-12">
         <div className=" w-52  h-52 rounded-full overflow-hidden border-4 border-green-500 shadow-black shadow-2xl md:w-72 md:h-72">
           <img
