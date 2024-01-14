@@ -6,25 +6,34 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({}) => {
   return (
-    <section className="relative bg-gradient-to-r from-blue-500 to-purple-500 text-white h-screen flex items-center justify-center">
-      <div className=" text-center  z-10">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Roby</h1>
-        <p className="text-lg md:text-xl mb-8">
-          Game Developer | Creative Mind
-        </p>
-        <button className="bg-white text-blue-500 px-4 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white">
-          View Portfolio
-        </button>
-      </div>
-
-      <div className="absolute top-40 md:top-1/2 md:right-6 transform -translate-y-1/2">
-        <div className=" w-52  h-52 rounded-full overflow-hidden border-4 border-white  shadow-black shadow-2xl md:w-96 md:h-96">
+    <section className="relative bg-gradient-to-t from-white to-green-300 text-white h-screen ">
+      <div className=" flex items-center justify-center p-6 md:p-12">
+        <div className=" w-52  h-52 rounded-full overflow-hidden border-4 border-green-500 shadow-black shadow-2xl md:w-72 md:h-72">
           <img
             src="mypic.jpg" // Replace with the path to your photo
             alt="Your Photo"
             className="w-full h-full object-cover"
           />
         </div>
+      </div>
+      <div className=" text-center p-5">
+        <h1 className="text-4xl md:text-6xl  text-green-800 font-bold mb-4">
+          Roby
+        </h1>
+        <p className=" text-base md:text-xl mb-8 text-green-800 m-5">
+          Experienced and imaginative game developer with 3 years of industry
+          expertise. Known for adaptability, I have a proven track record of
+          mastering new programming languages, tools, and software swiftly. As a
+          patient and creative problem solver, I am deeply passionate about
+          crafting innovative storytelling experiences, conducting rigorous game
+          testing, and implementing enhancements to elevate gameplay. Thriving
+          in fast-paced, deadline-driven environments, I bring in-depth
+          knowledge of gaming trends and a commitment to continually refining my
+          proficiency in diverse programming languages
+        </p>
+        {/* <button className="bg-white text-blue-500 px-4 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white">
+          View Portfolio
+        </button> */}
       </div>
     </section>
   );
