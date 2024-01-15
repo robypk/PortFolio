@@ -20,7 +20,7 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
       </div>
       <div className=" flex flex-wrap items-center justify-center">
         {videoURLs.map((VideoURL) => (
-          <VideoCard URL={VideoURL} />
+          <VideoCard key={VideoURL} URL={VideoURL} />
         ))}
         {/* <VideoCard URL="SqcY0GlETPk"></VideoCard>
         <VideoCard URL="wgsznroqF-s"></VideoCard>
