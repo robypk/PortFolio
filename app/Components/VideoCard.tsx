@@ -15,10 +15,17 @@ const VideoCard: React.FC<VideoCardProps> = ({ URL }) => {
     },
   };
   return (
-    <div className="p-10   rounded-lg">
-      <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+    <div className=" bg-green-100 hover:bg-green-200 p-3 m-5 relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl  transition duration-300">
+      <div className="overflow-hidden rounded-lg">
         <YouTube videoId={URL} opts={opts}></YouTube>
       </div>
+      <div className=" pl-1 pt-2 text-xl text-start text-green-700 font-bold">
+        Hello
+      </div>
+      <div className=" pl-1 text-start text-green-700">
+        GameEngine Programming
+      </div>
+      <div className=" pl-1 text-start text-green-700">Programming</div>
     </div>
   );
 };
