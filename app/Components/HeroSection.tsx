@@ -6,7 +6,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({}) => {
   return (
-    <section className="relative text-white h-screen ">
+    <section className="relative  text-white h-screen ">
       <div className=" flex items-center justify-center p-6 md:p-12">
         <div className=" w-52  h-52 rounded-full overflow-hidden border-4 border-green-500 shadow-black shadow-2xl md:w-72 md:h-72">
           <img
@@ -20,7 +20,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({}) => {
         <h1 className="text-4xl md:text-6xl  text-green-800 font-bold mb-4">
           Roby
         </h1>
-        <p className=" text-base md:text-xl mb-8 text-green-800 m-5">
+        <p className=" text-sm md:text-xl mb-8 text-green-800 m-5">
           Experienced and imaginative game developer with 3 years of industry
           expertise. Known for adaptability, I have a proven track record of
           mastering new programming languages, tools, and software swiftly. As a

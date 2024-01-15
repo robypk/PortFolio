@@ -8,10 +8,10 @@ export default function Home() {
       <div className="bg-gradient-to-t from-white to-green-300">
         <HeroSection />
       </div>
-      <div className="bg-gradient-to-t to-white from-green-300">
+      <div className="bg-gradient-to-t to-white from-green-300 p-5">
         <Skill />
       </div>
-      <div>
+      <div className="bg-gradient-to-t from-white to-green-300 p-5 ">
         <Projects></Projects>
       </div>
     </>
