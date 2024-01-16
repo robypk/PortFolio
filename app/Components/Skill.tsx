@@ -13,14 +13,15 @@ const Skill: React.FC<SkillProps> = ({}) => {
         Skill
       </div>
       <div className="  flex flex-wrap items-center justify-center">
-        <CircularProgressBar progress={80} skillName="Unity" />
+        <CircularProgressBar progress={85} skillName="Unity" />
         <CircularProgressBar progress={60} skillName=" Unreal" />
-        <CircularProgressBar progress={60} skillName="GoDot" />
-        <CircularProgressBar progress={60} skillName=" C#" />
-        <CircularProgressBar progress={40} skillName="C++" />
+        <CircularProgressBar progress={80} skillName="GoDot" />
+        <CircularProgressBar progress={85} skillName=" C#" />
+        <CircularProgressBar progress={60} skillName="C++" />
         <CircularProgressBar progress={40} skillName="TypeScript" />
-        <CircularProgressBar progress={50} skillName=" Python" />
+        <CircularProgressBar progress={55} skillName=" Python" />
         <CircularProgressBar progress={60} skillName="React" />
+        <CircularProgressBar progress={80} skillName="Blender" />
       </div>
     </>
   );

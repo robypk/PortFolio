@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 interface HeroSectionProps {
@@ -5,6 +6,13 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({}) => {
+  const handleDownload = () => {
+    const pdfUrl = "Robynew.pdf"; // Adjust the path accordingly
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Robynew.pdf";
+    link.click();
+  };
   return (
     <section className="relative  text-white ">
       <div className=" flex items-center justify-center p-6 md:p-12">
@@ -31,9 +39,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({}) => {
           knowledge of gaming trends and a commitment to continually refining my
           proficiency in diverse programming languages
         </p>
-        {/* <button className="bg-white text-blue-500 px-4 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white">
-          View Portfolio
-        </button> */}
+        <button
+          className=" bg-green-200 text-green-500 shadow-zinc-400 shadow-md px-4 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white"
+          onClick={handleDownload}
+        >
+          DownLoad Resume
+        </button>
       </div>
     </section>
   );
