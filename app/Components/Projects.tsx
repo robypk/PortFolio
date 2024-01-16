@@ -42,8 +42,11 @@ o Platform: Android"
           Name="Gold City"
           Description="Unreal Engine, C++, Blueprint, Blender"
         ></VideoCard>
-        <VideoCard URL="SqcY0GlETPk"></VideoCard>
-        <VideoCard URL="SqcY0GlETPk"></VideoCard>
+        <VideoCard
+          URL="PXsBw4Qhu0U"
+          Name="Electric Circuit VR"
+          Description=" Software used: Unity, Blender.....          Platform: Oculus"
+        ></VideoCard>
       </div>
     </>
   );
