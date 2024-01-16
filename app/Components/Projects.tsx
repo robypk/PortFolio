@@ -45,7 +45,7 @@ o Platform: Android"
         <VideoCard
           URL="PXsBw4Qhu0U"
           Name="Electric Circuit VR"
-          Description=" Software used: Unity, Blender.....          Platform: Oculus"
+          Description=" Software used: Unity, Blender          Platform: Oculus"
         ></VideoCard>
       </div>
     </>
