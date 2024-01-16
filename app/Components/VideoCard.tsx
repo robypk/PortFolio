@@ -24,7 +24,10 @@ const VideoCard: React.FC<VideoCardProps> = ({ URL, Name, Description }) => {
       <div className=" pl-1 pt-2 text-xl text-start text-green-700 font-bold">
         {Name}
       </div>
-      <p className=" w-80 pl-1 text-justify text-green-700"> {Description}</p>
+      <p className=" w-80 pl-1 text-justify text-xs text-green-700">
+        {" "}
+        {Description}
+      </p>
     </div>
   );
 };
