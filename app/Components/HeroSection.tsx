@@ -14,11 +14,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({}) => {
     link.click();
   };
   return (
-    <section className="relative  text-white ">
+    <section className="relative  text-white">
       <div className=" flex items-center justify-center p-6 md:p-12">
         <div className=" w-52  h-52 rounded-full overflow-hidden border-4 border-green-500 shadow-black shadow-2xl md:w-72 md:h-72">
           <img
-            src="mypic.jpg" // Replace with the path to your photo
+            src="Roby_Pic.jpg" // Replace with the path to your photo
             alt="Your Photo"
             className="w-full h-full object-cover"
           />
@@ -40,7 +40,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({}) => {
           proficiency in diverse programming languages
         </p>
         <button
-          className=" bg-green-200 text-green-500 shadow-zinc-400 shadow-md px-4 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white"
+          className=" bg-green-200 text-green-500 shadow-zinc-400 shadow-md m-10 px-4 py-2 rounded-full font-semibold hover:bg-green-500 hover:text-white"
           onClick={handleDownload}
         >
           DownLoad Resume
