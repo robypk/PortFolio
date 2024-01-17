@@ -6,9 +6,15 @@ interface VideoCardProps {
   URL?: string;
   Name?: string;
   Description?: string;
+  Tools?: string;
 }
 
-const VideoCard: React.FC<VideoCardProps> = ({ URL, Name, Description }) => {
+const VideoCard: React.FC<VideoCardProps> = ({
+  URL,
+  Name,
+  Description,
+  Tools,
+}) => {
   const opts: YouTubeProps["opts"] = {
     height: "195",
     width: "320",
@@ -24,9 +30,11 @@ const VideoCard: React.FC<VideoCardProps> = ({ URL, Name, Description }) => {
       <div className=" pl-1 pt-2 text-xl text-start text-green-700 font-bold">
         {Name}
       </div>
-      <p className=" pl-1 text-justify text-xs text-green-700">
-        {" "}
+      <p className=" pl-1 text-justify text-sm text-green-700">
         {Description}
+        <br />
+        <span className="font-semibold text-base">Tools: </span>
+        {Tools}
       </p>
     </div>
   );
