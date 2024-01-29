@@ -11,6 +11,24 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
       </div>
       <div className=" flex flex-wrap items-center justify-center">
         <VideoCard
+          URL="PXsBw4Qhu0U"
+          Name="Electric Circuit VR"
+          Description="Explore the Electric Circuit VR app, your interactive guide to learning circuits. 
+          Connect bulbs and motors etc..  with virtual cables in a fun and safe space. Perfect for students and hobbyists,
+           it makes understanding electricity easy and enjoyable. 
+           Step into the world of circuits and turn learning into an engaging virtual adventure"
+          Tools=" Unity, Blender, C#, OculusSDK. Platform: Meta Quest 2"
+        ></VideoCard>
+        <VideoCard
+          URL="ZFxjXFmVpsU"
+          Name="ConstructionSim VR"
+          Description="ConstructSim VR is your gateway to hands-on construction training in virtual reality. 
+          Step into a lifelike construction site, interact with tools, and learn procedures in a safe environment. 
+          Ideal for professionals and enthusiasts, this app makes construction education engaging and effective, 
+          ensuring your skills are ready for the real world."
+          Tools=" Unity, Blender, C#, UnityXR SDK. Platform: Meta Quest 2"
+        ></VideoCard>
+        <VideoCard
           URL="DBXuZ-ziI9w"
           Name="G-Runner"
           Description="An endless runner game developed for G gaiter robot, made to train paralyzed patients. G
@@ -44,11 +62,6 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
           Description=""
           Tools="UnrealEngine, C++, Blender
           Platform: Android ,Windows"
-        ></VideoCard>
-        <VideoCard
-          URL="PXsBw4Qhu0U"
-          Name="Electric Circuit VR"
-          Tools=" Unity, Blender, C#, OculusSDK. Platform: Meta Quest 2"
         ></VideoCard>
       </div>
     </>
