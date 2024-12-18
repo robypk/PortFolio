@@ -29,7 +29,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({}) => {
           Roby
         </h1>
         <p className=" text-sm md:text-xl mb-8 text-green-800 m-5">
-          Experienced and imaginative game developer with 3 years of industry
+          Experienced and imaginative game developer with 4 years of industry
           expertise. Known for adaptability, I have a proven track record of
           mastering new programming languages, tools, and software swiftly. As a
           patient and creative problem solver, I am deeply passionate about

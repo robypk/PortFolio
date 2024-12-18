@@ -22,6 +22,7 @@ const Skill: React.FC<SkillProps> = ({}) => {
         <CircularProgressBar progress={55} skillName=" Python" />
         <CircularProgressBar progress={60} skillName="React" />
         <CircularProgressBar progress={80} skillName="Blender" />
+        <CircularProgressBar progress={70} skillName="Git" />
       </div>
     </>
   );
