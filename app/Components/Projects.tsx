@@ -10,6 +10,13 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
         Projects
       </div>
       <div className=" flex flex-wrap items-center justify-center">
+      <VideoCard
+          URL="_Cd5riXPRQE"
+          Name="Smash Your Fitness"
+          Description="Smash Your Fitness makes indoor cycling irresistibly fun by transporting cyclists to a near-limitless number of richly immersive worlds, multiple gaming modes workouts, tours, races, and training programs  and a range of interactivity options that will appeal to everyone from casual gamers to seasoned endurance athletes."
+          Tools="Unity, Blender, C#, Angular, MongoDB, AWS
+          Platform: Windows, Mac"
+        ></VideoCard>
         <VideoCard
           URL="PXsBw4Qhu0U"
           Name="Electric Circuit VR"
