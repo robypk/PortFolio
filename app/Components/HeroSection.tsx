@@ -7,10 +7,10 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({}) => {
   const handleDownload = () => {
-    const pdfUrl = "Robynew.pdf"; // Adjust the path accordingly
+    const pdfUrl = "Roby_Resume.pdf"; // Adjust the path accordingly
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "Robynew.pdf";
+    link.download = "Roby_Resume.pdf";
     link.click();
   };
   return (
