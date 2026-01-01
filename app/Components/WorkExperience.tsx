@@ -24,7 +24,7 @@ const WorkExperience = () => {
         <div className="space-y-4">
             <div>
                 <strong>Smash Your Fitness– Windows, Mac</strong>
-                <p className="mt-1">"Smash Your Fitness" is an indoor cycling simulator game that connects to a physical exercise bike, allowing players to improve their fitness while engaging in a realistic virtual cycling experience on Windows and Mac.</p>
+                <p className="mt-1">&quot;Smash Your Fitness&quot; is an indoor cycling simulator game that connects to a physical exercise bike, allowing players to improve their fitness while engaging in a realistic virtual cycling experience on Windows and Mac.</p>
                 <ul className="list-disc list-inside ml-4 mt-2 space-y-1 text-gray-500">
                     <li>Improved visuals and performance by optimizing 3D environments, including terrain and animations.</li>
                     <li>Enhanced asset management and reduced game load times with Unity Addressable across scenes.</li>
@@ -43,7 +43,7 @@ const WorkExperience = () => {
          <ul className="list-disc list-inside space-y-3 mt-2">
             <li>
                 <strong>Ocado Group Induction – WebXR</strong><br/>
-                Designed and developed gameplay mechanics for 'Ocado Group Induction,' a gamified onboarding platform to enhance the new employee induction experience
+                Designed and developed gameplay mechanics for &apos;Ocado Group Induction,&apos; a gamified onboarding platform to enhance the new employee induction experience
             </li>
             <li>
                 <strong>Microsoft DreamSpace – WebXR</strong><br/>

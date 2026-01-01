@@ -25,7 +25,7 @@ const HeroSection = () => {
        {/* Text Content */}
       <div className="w-full md:w-1/2 z-10 flex flex-col items-center md:items-start text-center md:text-left space-y-6 animate-in slide-in-from-left-10 duration-1000 fade-in">
         <h1 className="text-5xl md:text-8xl font-black tracking-tighter text-gray-900">
-          HI, I'M <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-800">ROBY</span>
+          HI, I&apos;M <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-800">ROBY</span>
         </h1>
         <h2 className="text-2xl md:text-4xl font-bold text-gray-600 flex items-center gap-2">
           <span className="w-3 h-3 bg-green-600 rounded-full animate-pulse shadow-[0_0_10px_#16a34a]" />

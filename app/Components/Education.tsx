@@ -9,7 +9,7 @@ const Education = () => {
       <div className="space-y-4">
         <div className="relative pl-4 border-l-4 border-green-500">
           <h3 className="text-xl font-bold text-white leading-tight">
-            Bachelor's Degree in<br/>Electrical and Electronics
+            Bachelor&apos;s Degree in<br/>Electrical and Electronics
           </h3>
           <p className="text-emerald-400 font-bold text-sm tracking-wide mt-2 bg-green-500/20 inline-block px-2 py-1 rounded">
             2016

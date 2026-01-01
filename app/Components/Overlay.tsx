@@ -18,7 +18,7 @@ const Overlay = () => {
         <h1 className="text-7xl md:text-9xl font-black text-white leading-none tracking-tighter">
           HELLO <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-emerald-600">
-            I'M ROBY
+            I&apos;M ROBY
           </span>
         </h1>
         <div className="mt-8 p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl max-w-lg hover:bg-white/10 transition-colors">

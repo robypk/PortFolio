@@ -49,12 +49,12 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
             />
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-xl font-bold text-gray-800">
+            <span className="text-xl font-bold text-white">
                 {progress}%
             </span>
         </div>
       </div>
-      <h1 className="mt-3 text-lg font-semibold text-gray-700 group-hover:text-green-600 transition-colors uppercase tracking-wider">
+      <h1 className="mt-3 text-lg font-semibold text-white group-hover:text-green-600 transition-colors uppercase tracking-wider">
         {skillName}
       </h1>
     </div>

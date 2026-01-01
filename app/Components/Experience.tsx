@@ -1,14 +1,29 @@
 "use client";
 import React, { useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { ScrollControls, useScroll, Environment, Float, useGLTF } from "@react-three/drei";
+import { ScrollControls, useScroll, Environment, Float, useGLTF, Stars } from "@react-three/drei";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import Overlay from "./Overlay";
 
 // Preload the model
 useGLTF.preload("/avatar.glb");
 
+const SkyboxRotator = () => {
+  const { scene } = useThree();
+  
+  useFrame((_, delta) => {
+    // Check if backgroundRotation exists (newer Three.js) or fall back to standard rotation if manual mesh
+    if (scene.backgroundRotation) {
+        scene.backgroundRotation.y += delta * 0.01; // Slow rotation speed
+        scene.environmentRotation.y += delta * 0.01; // Sync lighting rotation
+    }
+  });
+
+  return null;
+};
+
 const AvatarModel = () => {
+    // ... (AvatarModel code stays here)
     const scroll = useScroll();
     const groupRef = useRef<THREE.Group>(null);
     const { scene } = useGLTF("/avatar.glb");
@@ -83,9 +98,13 @@ const Experience = () => {
   return (
     <>
       <Canvas shadows camera={{ position: [0, 0, 5], fov: 45 }}>
-        <ambientLight intensity={0.8} />
+        <ambientLight intensity={0.5} />
         <directionalLight position={[5, 10, 5]} intensity={1.5} castShadow />
-        <Environment preset="city" />
+        
+        {/* Skybox & Background */}
+        <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/shanghai_bund_4k.hdr" background />
+        <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+        <SkyboxRotator />
 
         <ScrollControls pages={8} damping={0.2} style={{ width: "100%", height: "100%" }}>
             <React.Suspense fallback={null}>
@@ -94,11 +113,6 @@ const Experience = () => {
             <Overlay />
         </ScrollControls>
       </Canvas>
-      
-      {/* Instructions for user to swap model */}
-      <div className="fixed bottom-4 left-4 text-xs text-gray-400 pointer-events-none opacity-50">
-        * Upload 'avatar.glb' to public/ to replace placeholder
-      </div>
     </>
   );
 };
