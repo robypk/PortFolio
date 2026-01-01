@@ -5,8 +5,9 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import Overlay from "./Overlay";
 
-// Preload the model
-useGLTF.preload("/avatar.glb");
+// Preload the model with correct base path
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/PortFolio' : '';
+useGLTF.preload(BASE_PATH + "/avatar.glb");
 
 const SkyboxRotator = () => {
   const { scene } = useThree();
@@ -26,7 +27,7 @@ const AvatarModel = () => {
     // ... (AvatarModel code stays here)
     const scroll = useScroll();
     const groupRef = useRef<THREE.Group>(null);
-    const { scene } = useGLTF("/avatar.glb");
+    const { scene } = useGLTF(BASE_PATH + "/avatar.glb");
 
     useFrame((state, delta) => {
         if (!groupRef.current) return;
