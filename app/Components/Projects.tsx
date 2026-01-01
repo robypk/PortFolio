@@ -5,11 +5,16 @@ interface ProjectsProps {}
 
 const Projects: React.FC<ProjectsProps> = ({}) => {
   return (
-    <>
-      <div className=" flex flex-wrap items-center justify-center text-2xl md:text-3xl  text-green-800 font-bold mb-4">
-        Projects
+<>
+      <div className="flex flex-col items-center justify-center mb-16">
+        <h2 className="text-6xl md:text-8xl font-black text-white/5 uppercase tracking-tighter absolute select-none">
+          PROJECTS
+        </h2>
+        <h2 className="text-4xl md:text-5xl font-black text-white relative z-10">
+          Featured Works
+        </h2>
       </div>
-      <div className=" flex flex-wrap items-center justify-center">
+      <div className="flex flex-wrap items-stretch justify-center gap-6 px-4">
       <VideoCard
           URL="_Cd5riXPRQE"
           Name="Smash Your Fitness"

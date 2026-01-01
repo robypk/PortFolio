@@ -16,26 +16,29 @@ const VideoCard: React.FC<VideoCardProps> = ({
   Tools,
 }) => {
   const opts: YouTubeProps["opts"] = {
-    height: "195",
-    width: "320",
+    height: "200",
+    width: "100%",
     playerVars: {
       autoplay: 0,
     },
   };
   return (
-    <div className=" bg-green-100 hover:bg-green-200 p-3 m-5 relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl  transition duration-300 w-80 ">
-      <div className="overflow-hidden rounded-lg">
-        <YouTube videoId={URL} opts={opts}></YouTube>
+    <div className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-green-500 hover:shadow-lg hover:shadow-green-500/10 p-4 m-5 relative group overflow-hidden rounded-xl transition-all duration-300 w-80 md:w-96 flex flex-col h-[500px]">
+      <div className="overflow-hidden rounded-lg shadow-sm mb-4">
+        <YouTube videoId={URL} opts={opts} className="w-full" />
       </div>
-      <div className=" pl-1 pt-2 text-xl text-start text-green-700 font-bold">
-        {Name}
+      <div className="flex-grow flex flex-col">
+        <div className="text-xl text-start text-green-400 font-bold mb-2 group-hover:text-green-300 transition-colors">
+            {Name}
+        </div>
+        <p className="text-justify text-sm text-gray-300 mb-4 flex-grow overflow-y-auto scrollbar-hide">
+            {Description}
+        </p>
+        <div className="pt-2 border-t border-white/10">
+            <span className="font-bold text-green-400 text-xs uppercase tracking-wider block mb-1">Stack:</span>
+            <span className="text-xs text-gray-400 font-mono">{Tools}</span>
+        </div>
       </div>
-      <p className=" pl-1 text-justify text-sm text-green-700">
-        {Description}
-        <br />
-        <span className="font-semibold text-base">Tools: </span>
-        {Tools}
-      </p>
     </div>
   );
 };
