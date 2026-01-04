@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { ScrollControls, useScroll, Environment, Float, useGLTF, Stars } from "@react-three/drei";
+import { ScrollControls, useScroll, Environment, Float, useGLTF, Stars, OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import Overlay from "./Overlay";
@@ -103,13 +103,14 @@ const Experience = () => {
         <directionalLight position={[5, 10, 5]} intensity={1.5} castShadow />
         
         {/* Skybox & Background */}
-        <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/shanghai_bund_4k.hdr" background />
-        <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
-        <SkyboxRotator />
+        <Environment preset="city" background />
+        <Stars radius={100} depth={50} count={50000} factor={4} saturation={0} fade speed={1} />
+        {/*<SkyboxRotator />*/}
 
         <ScrollControls pages={8} damping={0.2} style={{ width: "100%", height: "100%" }}>
             <React.Suspense fallback={null}>
                 <AvatarModel />
+                {/* <OrbitControls /> */}
             </React.Suspense>
             <Overlay />
         </ScrollControls>
