@@ -2,9 +2,11 @@
 import React from "react";
 import Image from "next/image";
 
+import getBasePath from "../utils/getBasePath";
+
 const HeroSection = () => {
   const handleDownload = () => {
-    const pdfUrl = "Roby_Resume.pdf";
+    const pdfUrl = getBasePath("/Roby_Resume.pdf");
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "Roby_Resume.pdf";
@@ -97,7 +99,7 @@ const HeroSection = () => {
            {/* Image Container */}
            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-[#c9a227] shadow-[0_0_50px_rgba(201,162,39,0.3)]">
              <Image 
-               src="/Roby_Pic.jpg" 
+               src={getBasePath("/Roby_Pic.jpg")} 
                alt="Roby"
                fill
                className="object-cover"
