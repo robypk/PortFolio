@@ -7,123 +7,127 @@ const WorkExperience = () => {
       company: "Amrita Vishwa Vidyapeetham",
       period: "Dec 2024 - Present",
       location: "Kollam, Kerala",
-      description: (
-        <ul className="list-disc list-inside space-y-2 mt-2">
-            <li>Currently leading a team of seven developers in the PSSCIVE projects, funded by the Ministry of Education, India.</li>
-            <li>Our team is focused on designing and developing Virtual Labs for Vocational Higher Secondary students, enabling immersive and interactive learning experiences.</li>
-            <li>My role involves overseeing the entire development lifecycle, ensuring high-quality implementation, optimizing performance, and driving innovation in Unity-based simulations.</li>
-        </ul>
-      )
+      rarity: "legendary",
+      description: [
+        "Leading a team of 7 developers in Ministry of Education funded PSSCIVE projects.",
+        "Developing immersive Virtual Labs for Vocational Higher Secondary students.",
+        "Overseeing full development lifecycle and driving innovation in Unity-based simulations."
+      ]
     },
     {
       role: "Senior Game Developer",
       company: "Improvement Interactive",
       period: "March 2024 – Dec 2024",
       location: "Tucson, AZ",
-      description: (
-        <div className="space-y-4">
-            <div>
-                <strong>Smash Your Fitness– Windows, Mac</strong>
-                <p className="mt-1">&quot;Smash Your Fitness&quot; is an indoor cycling simulator game that connects to a physical exercise bike, allowing players to improve their fitness while engaging in a realistic virtual cycling experience on Windows and Mac.</p>
-                <ul className="list-disc list-inside ml-4 mt-2 space-y-1 text-gray-500">
-                    <li>Improved visuals and performance by optimizing 3D environments, including terrain and animations.</li>
-                    <li>Enhanced asset management and reduced game load times with Unity Addressable across scenes.</li>
-                    <li>Developed custom features, like looping terrains and dynamic road generation, for a more immersive experience.</li>
-                </ul>
-            </div>
-        </div>
-      )
+      rarity: "epic",
+      description: [
+        "Optimized visuals & performance for 'Smash Your Fitness' (Windows/Mac).",
+        "Implemented Unity Addressables to reduce load times & enhance asset management.",
+        "Developed custom features like looping terrains and dynamic road generation."
+      ]
     },
     {
       role: "Unity Developer",
       company: "Olive Group",
       period: "April 2022 – Feb 2024",
       location: "Dublin, Ireland",
-      description: (
-         <ul className="list-disc list-inside space-y-3 mt-2">
-            <li>
-                <strong>Ocado Group Induction – WebXR</strong><br/>
-                Designed and developed gameplay mechanics for &apos;Ocado Group Induction,&apos; a gamified onboarding platform to enhance the new employee induction experience
-            </li>
-            <li>
-                <strong>Microsoft DreamSpace – WebXR</strong><br/>
-                Developed interactive gameplay features for Microsoft DreamSpace, an educational platform aimed at providing students with an introductory experience of DreamSpace.
-            </li>
-         </ul>
-      )
+      rarity: "epic",
+      description: [
+        "Designed gameplay for 'Ocado Group Induction' (WebXR onboarding platform).",
+        "Developed interactive features for Microsoft DreamSpace educational platform.",
+        "Programmed immersive VR simulations: Electric Circuit Simulator & Building Construction VR.",
+        "Served as gameplay programmer for Rugby Tactics Builder (WebXR)."
+      ]
     },
     {
-      role: "Game Developer (Robotics R&D)",
+      role: "Game Developer (R&D)",
       company: "Genrobotics Innovations",
       period: "Jan 2021 - April 2022",
       location: "Kerala, India",
-      description: (
-         <div className="space-y-2">
-             <p>Developed an endless runner 3D game called G-runner for the medical mobility robot, G-Gaiter.</p>
-             <ul className="list-disc list-inside ml-4 space-y-1 text-gray-500 text-xs">
-                <li>Level design and gameplay programming were done in Godot (Game Engine).</li>
-                <li>Modelling of game-ready 3D assets and baking PBR texture atlas done in blender for better game optimization.</li>
-                <li>Created both simulated and armature based animations.</li>
-                <li>UV Unwrapping of game-ready models.</li>
-                <li>UI/UX design and programming done in Godot.</li>
-                <li>Sensor integration using python (pyserial, socket).</li>
-                <li>Optimization and Drawcall reduction for better performance and reasonable FPS.</li>
-             </ul>
-         </div>
-      )
+      rarity: "rare",
+      description: [
+        "Developed 'G-Runner' endless runner for G-Gaiter medical robot recovery training.",
+        "Handled full pipeline: Level Design, Modeling, Texturing, Animation & UI in Godot.",
+        "Integrated sensors using Python (pyserial, socket) for patient input.",
+        "Optimized 3D assets and drawcalls for smooth performance."
+      ]
     },
   ];
 
+  const getRarityStyles = (rarity: string) => {
+    switch (rarity) {
+      case "legendary":
+        return { border: '#c9a227', glow: 'rgba(201,162,39,0.3)', label: 'LEGENDARY', labelBg: '#c9a227' };
+      case "epic":
+        return { border: '#8b7355', glow: 'rgba(139,115,85,0.2)', label: 'EPIC', labelBg: '#8b7355' };
+      default:
+        return { border: '#4a4a4a', glow: 'rgba(74,74,74,0.2)', label: 'RARE', labelBg: '#4a4a4a' };
+    }
+  };
+
   return (
-    <div className="w-full max-w-6xl">
-      <h2 className="text-6xl font-black text-white mb-12 tracking-tighter text-center">
-        EXPERIENCE
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="group relative p-8 bg-white/5 backdrop-blur-xl rounded-[2.5rem] border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10"
-          >
-            <div className="absolute top-8 right-8 text-6xl opacity-10 font-black text-white z-0 select-none">
-                0{index + 1}
-            </div>
-            
-            <div className="relative z-10">
-                <div className="inline-block px-4 py-2 bg-white/10 rounded-full text-xs font-bold text-gray-300 mb-4 shadow-sm">
-                    {exp.period}
+    <section className="py-20 px-4" style={{ background: 'linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%)' }}>
+      <div className="w-full max-w-6xl mx-auto">
+        
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="gow-header text-4xl md:text-6xl mb-4">
+            Experience
+          </h2>
+          <div className="gow-divider w-48 mx-auto" />
+        </div>
+
+        {/* Experience Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {experiences.map((exp, index) => {
+            const styles = getRarityStyles(exp.rarity);
+            return (
+              <div
+                key={index}
+                className="gow-panel gow-hover-glow p-6 md:p-8 relative"
+                style={{ borderColor: styles.border, boxShadow: `0 0 20px ${styles.glow}` }}
+              >
+                {/* Rarity Label */}
+                <div 
+                  className="absolute -top-3 right-6 px-3 py-1 text-xs font-bold tracking-widest"
+                  style={{ background: styles.labelBg, color: '#0a0a0a' }}
+                >
+                  {styles.label}
                 </div>
-                <h3 className="text-3xl font-black text-white leading-none mb-2">{exp.role}</h3>
-                <p className="text-green-400 font-bold text-sm uppercase tracking-wider mb-6 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-green-500"></span>
+
+                {/* Period Badge */}
+                <div className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider"
+                  style={{ background: 'rgba(201,162,39,0.1)', border: '1px solid #8b7355', color: '#c9a227' }}>
+                  {exp.period}
+                </div>
+
+                {/* Role */}
+                <h3 className="text-2xl font-black mb-2" style={{ color: '#f5e6c8' }}>
+                  {exp.role}
+                </h3>
+
+                {/* Company */}
+                <p className="text-sm font-bold uppercase tracking-wider mb-6 flex items-center gap-2"
+                  style={{ color: '#c9a227' }}>
+                  <span className="w-2 h-2 rounded-full" style={{ background: '#c9a227' }} />
                   {exp.company}, {exp.location}
                 </p>
-                <div className="text-gray-300 text-sm leading-relaxed font-medium">
-                  {exp.description}
-                </div>
-            </div>
-          </div>
-        ))}
+
+                {/* Description */}
+                <ul className="space-y-3">
+                  {exp.description.map((item, i) => (
+                    <li key={i} className="flex gap-3 text-sm leading-relaxed" style={{ color: '#a0a0a0' }}>
+                      <span className="shrink-0 mt-1" style={{ color: '#c9a227' }}>◆</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
       </div>
-      
-      <div className="mt-16 pt-12 border-t border-white/10">
-         <h3 className="text-3xl font-black text-white mb-8 text-center uppercase tracking-tight">Notable Projects</h3>
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
-                <h4 className="font-bold text-lg text-emerald-400">Electric Circuit Simulator VR</h4>
-                <p className="text-xs text-gray-400 mt-3 leading-relaxed">Contributed as a programmer to this immersive VR education tool.</p>
-            </div>
-            <div className="bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
-                <h4 className="font-bold text-lg text-emerald-400">Building Construction VR</h4>
-                <p className="text-xs text-gray-400 mt-3 leading-relaxed">Programmer for a VR construction safety and training simulator.</p>
-            </div>
-            <div className="bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
-                <h4 className="font-bold text-lg text-emerald-400">Rugby Tactics Builder</h4>
-                <p className="text-xs text-gray-400 mt-3 leading-relaxed">Gameplay programmer for a WebXR tactical training solution.</p>
-            </div>
-         </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

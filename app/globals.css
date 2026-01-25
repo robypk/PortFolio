@@ -1,23 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #000000;
-  color: #ffffff;
+:root {
+  /* God of War Color Palette */
+  --gow-dark: #0a0a0a;
+  --gow-stone: #1a1a1a;
+  --gow-stone-light: #2a2a2a;
+  --gow-gold: #c9a227;
+  --gow-gold-light: #e6c84a;
+  --gow-gold-dark: #8b7355;
+  --gow-bronze: #b8860b;
+  --gow-cream: #f5e6c8;
+  --gow-red: #8b0000;
+  --gow-red-light: #dc143c;
 }
 
-/* Custom scrollbar */
+@layer base {
+  body {
+    background-color: var(--gow-dark);
+    color: var(--gow-cream);
+    font-family: 'Cinzel', serif;
+  }
+}
+
+@layer components {
+
+  /* Golden Border Frame */
+  .gow-frame {
+    position: relative;
+    background: linear-gradient(145deg, var(--gow-stone), var(--gow-dark));
+    border: 2px solid var(--gow-gold-dark);
+    box-shadow:
+      inset 0 0 30px rgba(0, 0, 0, 0.8),
+      0 0 20px rgba(201, 162, 39, 0.1);
+  }
+
+  .gow-frame::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    pointer-events: none;
+  }
+
+  /* Ornate Corner Decorations */
+  .gow-corners::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, var(--gow-gold) 0%, transparent 15%),
+      linear-gradient(225deg, var(--gow-gold) 0%, transparent 15%),
+      linear-gradient(315deg, var(--gow-gold) 0%, transparent 15%),
+      linear-gradient(45deg, var(--gow-gold) 0%, transparent 15%);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  /* Stat Bar */
+  .gow-stat-bar {
+    background: linear-gradient(90deg, var(--gow-stone) 0%, var(--gow-stone-light) 100%);
+    border: 1px solid var(--gow-gold-dark);
+    height: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gow-stat-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gow-gold-dark), var(--gow-gold), var(--gow-gold-light));
+    box-shadow: 0 0 10px var(--gow-gold);
+    transition: width 0.5s ease-out;
+  }
+
+  /* Golden Text */
+  .gow-text-gold {
+    color: var(--gow-gold);
+    text-shadow: 0 0 10px rgba(201, 162, 39, 0.5);
+  }
+
+  /* Golden Glow on Hover */
+  .gow-hover-glow {
+    transition: all 0.3s ease;
+  }
+
+  .gow-hover-glow:hover {
+    box-shadow: 0 0 30px rgba(201, 162, 39, 0.3);
+    border-color: var(--gow-gold);
+  }
+
+  /* Stone Button */
+  .gow-button {
+    background: linear-gradient(145deg, var(--gow-stone-light), var(--gow-stone));
+    border: 2px solid var(--gow-gold-dark);
+    color: var(--gow-gold);
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .gow-button:hover {
+    background: linear-gradient(145deg, var(--gow-gold-dark), var(--gow-bronze));
+    color: var(--gow-dark);
+    box-shadow: 0 0 20px rgba(201, 162, 39, 0.4);
+  }
+
+  /* Section Header */
+  .gow-header {
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    font-weight: 700;
+    color: var(--gow-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-shadow:
+      0 0 20px rgba(201, 162, 39, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Divider */
+  .gow-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gow-gold), transparent);
+    margin: 1rem 0;
+  }
+
+  /* Card/Panel */
+  .gow-panel {
+    background: linear-gradient(160deg, rgba(42, 42, 42, 0.9) 0%, rgba(26, 26, 26, 0.95) 100%);
+    border: 1px solid var(--gow-gold-dark);
+    position: relative;
+  }
+
+  .gow-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gow-gold), transparent);
+  }
+
+  /* Legendary Rarity Indicator */
+  .gow-legendary {
+    border-color: var(--gow-gold);
+    box-shadow: 0 0 15px rgba(201, 162, 39, 0.2);
+  }
+
+  .gow-legendary::after {
+    content: 'LEGENDARY';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: var(--gow-gold);
+    color: var(--gow-dark);
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* Custom scrollbar - Norse style */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f3f4f6;
+  background: var(--gow-dark);
+  border-left: 1px solid var(--gow-gold-dark);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #22c55e;
-  /* Green 500 */
-  border-radius: 4px;
+  background: linear-gradient(180deg, var(--gow-gold-dark), var(--gow-bronze));
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gow-gold);
 }

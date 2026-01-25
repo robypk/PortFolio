@@ -1,25 +1,71 @@
 import React from "react";
 
 const Education = () => {
+  const education = [
+    {
+      degree: "Bachelor of Electrical Engineering",
+      institution: "Bishop Jerome Institute, Kollam, Kerala",
+      period: "2012 - 2016",
+      location: "Kollam, Kerala"
+    }
+  ];
+
   return (
-    <div className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] shadow-xl w-full max-w-lg border border-white/10 hover:scale-105 transition-transform duration-300">
-      <h2 className="text-xl font-black text-white mb-4 uppercase tracking-widest flex items-center gap-2">
-        <span className="text-3xl">🎓</span> Education
-      </h2>
-      <div className="space-y-4">
-        <div className="relative pl-4 border-l-4 border-green-500">
-          <h3 className="text-xl font-bold text-white leading-tight">
-            Bachelor&apos;s Degree in<br/>Electrical and Electronics
-          </h3>
-          <p className="text-emerald-400 font-bold text-sm tracking-wide mt-2 bg-green-500/20 inline-block px-2 py-1 rounded">
-            2016
-          </p>
-          <p className="text-gray-300 mt-2">
-            Bishop Jerome Institute, Kollam, Kerala
-          </p>
+    <section className="py-20 px-4" style={{ background: '#0a0a0a' }}>
+      <div className="max-w-4xl mx-auto">
+        
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="gow-header text-3xl md:text-4xl mb-4">
+            Knowledge Acquired
+          </h2>
+          <div className="gow-divider w-48 mx-auto" />
+        </div>
+
+        {/* Education Cards */}
+        <div className="space-y-6">
+          {education.map((edu, index) => (
+            <div key={index} className="gow-panel gow-hover-glow p-6 flex items-center gap-6">
+              
+              {/* Icon */}
+              <div className="w-16 h-16 flex items-center justify-center text-3xl shrink-0"
+                style={{ 
+                  background: 'linear-gradient(145deg, #2a2a2a, #1a1a1a)',
+                  border: '2px solid #8b7355'
+                }}>
+                📚
+              </div>
+
+              {/* Content */}
+              <div className="flex-1">
+                <h3 className="text-xl font-bold mb-1" style={{ color: '#f5e6c8' }}>
+                  {edu.degree}
+                </h3>
+                <p className="font-bold" style={{ color: '#c9a227' }}>
+                  {edu.institution}
+                </p>
+                <p className="text-sm mt-2" style={{ color: '#8b7355' }}>
+                  {edu.period} • {edu.location}
+                </p>
+              </div>
+
+              {/* Decorative Element */}
+              <div className="hidden md:block w-px h-16" 
+                style={{ background: 'linear-gradient(180deg, transparent, #c9a227, transparent)' }} />
+              
+              <div className="hidden md:block text-right">
+                <div className="text-xs uppercase tracking-widest" style={{ color: '#8b7355' }}>
+                  Completed
+                </div>
+                <div className="text-lg font-bold" style={{ color: '#c9a227' }}>
+                  ✓
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
