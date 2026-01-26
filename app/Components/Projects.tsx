@@ -84,7 +84,7 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
       URL: "A9prTPHHjO0",
       Name: "ROA Fashions",
       Description: "Customize your own fashion with ROA Fashions. A unique fashion website with a unique design and user-friendly interface.",
-      Tools: "Next.js, Three.js, TypeScript, Tailwind CSS, AWS, MongoDB, Razorpay, Zoho Zeptomail, GoogleAuth, Prisma, Axios",
+      Tools: "Next.js, Node,js Three.js, TypeScript, Tailwind CSS, AWS, MongoDB, Razorpay, Zoho Zeptomail, GoogleAuth, Prisma, Axios",
       Platform: "Web",
       rarity: "legendary"
     }

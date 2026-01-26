@@ -18,7 +18,7 @@ const Bio = () => {
           {/* Left Column */}
           <div className="space-y-6">
             
-            {/* Objective */}
+            {/* About Me */}
             <div className="gow-panel gow-hover-glow p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 flex items-center justify-center text-2xl"
@@ -26,12 +26,11 @@ const Bio = () => {
                   🎯
                 </div>
                 <h3 className="text-xl font-bold uppercase tracking-wider" style={{ color: '#c9a227' }}>
-                  Objective
+                  About Me
                 </h3>
               </div>
               <p className="text-sm leading-relaxed" style={{ color: '#a0a0a0' }}>
-                To work and practice my knowledge as a Game Developer and add to my
-                overall experience by becoming a valued member of a growing company.
+                Senior Game Developer with 5+ years in games and 8+ years total engineering experience. Transitioned from Electrical Engineering to follow a passion for interactive worlds. Currently leading simulation projects at Amrita Vishwa Vidyapeetham. Expert in Unity, C#, and realtime systems – fueled by curiosity and the joy of creating meaningful experiences.
               </p>
             </div>
 
