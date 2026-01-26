@@ -60,6 +60,46 @@
     pointer-events: none;
   }
 
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: scale(1);
+      border-color: var(--gow-gold-dark);
+    }
+
+    50% {
+      opacity: 0.6;
+      transform: scale(1.02);
+      border-color: var(--gow-gold);
+      box-shadow: 0 0 20px rgba(201, 162, 39, 0.4);
+    }
+  }
+
+  @keyframes pulse-glow-reverse {
+
+    0%,
+    100% {
+      opacity: 0.2;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: scale(0.98);
+      border-color: var(--gow-gold-dark);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow-reverse {
+    animation: pulse-glow-reverse 4s ease-in-out infinite;
+  }
+
   /* Stat Bar */
   .gow-stat-bar {
     background: linear-gradient(90deg, var(--gow-stone) 0%, var(--gow-stone-light) 100%);
