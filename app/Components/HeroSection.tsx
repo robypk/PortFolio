@@ -99,9 +99,10 @@ const HeroSection = () => {
            {/* Image Container */}
            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-[#c9a227] shadow-[0_0_50px_rgba(201,162,39,0.3)]">
              <Image 
-               src={getBasePath("/Roby_Pic.jpg")} 
+               src={getBasePath("/Roby_Pic.png")} 
                alt="Roby"
-               fill
+               width={500}
+               height={500}
                className="object-cover"
                priority
              />

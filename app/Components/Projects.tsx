@@ -5,6 +5,14 @@ interface ProjectsProps {}
 
 const Projects: React.FC<ProjectsProps> = ({}) => {
   const projects = [
+      {
+      URL: "_j_oSRICDvU",
+      Name: "Traffic Guru 1.0 Prototype",
+      Description: "Traffic management game where players must navigate through traffic and avoid collisions. Currently under development.",
+      Tools: "Unity, Blender, C#",
+      Platform: "Android, Windows",
+      rarity: "legendary"
+    },
     {
       URL: "o36ewIXd0Zk",
       Name: "Smash Your Fitness",
@@ -60,6 +68,25 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
       Tools: "Unreal Engine, C++, Blender",
       Platform: "Android, Windows",
       rarity: "rare"
+    },
+    {
+      URL: "XUL2_0m8BJI",
+      Name: "Maadan : The Hope. [Early Stage Development]",
+      Description: "Maadan : The Hope is a 3D action-adventure game based on Kerala flood 2018. Currently under development.",
+      Tools: "Unreal Engine, C++, Blender",
+      Platform: "Steam",
+      rarity: "rare"
+    },
+  ];
+
+  const sideProjects = [
+ {
+      URL: "A9prTPHHjO0",
+      Name: "ROA Fashions",
+      Description: "Customize your own fashion with ROA Fashions. A unique fashion website with a unique design and user-friendly interface.",
+      Tools: "Next.js, Three.js, TypeScript, Tailwind CSS, AWS, MongoDB, Razorpay, Zoho Zeptomail, GoogleAuth, Prisma, Axios",
+      Platform: "Web",
+      rarity: "legendary"
     }
   ];
 
@@ -86,7 +113,30 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
               URL={project.URL}
               Name={project.Name}
               Description={project.Description}
-              Tools={`${project.Tools}\nPlatform: ${project.Platform}`}
+              Tools={project.Tools}
+              Platform={project.Platform}
+              rarity={project.rarity}
+            />
+          ))}
+        </div>
+        <div className="text-center mt-16">
+          <h2 className="gow-header text-4xl md:text-6xl mb-4">
+            Side Quests
+          </h2>
+          <p className="text-sm uppercase tracking-widest" style={{ color: '#8b7355' }}>
+             3D Web Developments
+          </p>
+          <div className="gow-divider w-48 mx-auto mt-4" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sideProjects.map((project, index) => (
+            <VideoCard
+              key={index}
+              URL={project.URL}
+              Name={project.Name}
+              Description={project.Description}
+              Tools={project.Tools}
+              Platform={project.Platform}
               rarity={project.rarity}
             />
           ))}

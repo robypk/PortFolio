@@ -6,10 +6,11 @@ interface VideoCardProps {
   Name: string;
   Description: string;
   Tools: string;
+  Platform: string;
   rarity?: string;
 }
 
-const VideoCard: React.FC<VideoCardProps> = ({ URL, Name, Description, Tools, rarity = "rare" }) => {
+const VideoCard: React.FC<VideoCardProps> = ({ URL, Name, Description, Tools, Platform, rarity = "rare" }) => {
   const getRarityStyles = () => {
     switch (rarity) {
       case "legendary":
@@ -57,10 +58,13 @@ const VideoCard: React.FC<VideoCardProps> = ({ URL, Name, Description, Tools, ra
         <p className="text-sm mb-4 line-clamp-3" style={{ color: '#a0a0a0' }}>
           {Description}
         </p>
-        <div className="text-xs uppercase tracking-wide" style={{ color: '#8b7355' }}>
+        <div className="text-xs uppercase tracking-wide " style={{ color: '#ff8c00ff' }}>
           {Tools.split('\n').map((line, i) => (
             <div key={i}>{line}</div>
           ))}
+          <div className="text-xs uppercase tracking-wide mt-2" style={{ color: '#da9c52ff' }}>
+            {Platform}
+          </div>
         </div>
       </div>
     </div>
