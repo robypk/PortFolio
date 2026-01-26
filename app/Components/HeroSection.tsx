@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { RevealOnScroll } from "./RevealOnScroll";
 
 import getBasePath from "../utils/getBasePath";
 
@@ -91,12 +90,11 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Image */}
-      <RevealOnScroll>
       <div className="relative w-full max-w-md lg:w-[500px] lg:h-[600px] z-10 order-1 lg:order-2 flex justify-center items-center">
-        <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-full lg:h-full flex justify-center items-center">
+        <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-full lg:h-full">
            {/* Decorative Frame */}
-           <div className="absolute -inset-4 border-2 border-[#8b7355] rounded-full animate-pulse-glow" />
-           <div className="absolute -inset-8 border border-[#c9a227] rounded-full animate-pulse-glow-reverse" />
+           <div className="absolute -inset-4 border-2 border-[#8b7355] rounded-full opacity-30 animate-pulse" />
+           <div className="absolute -inset-8 border border-[#c9a227] rounded-full opacity-20" />
            
            {/* Image Container */}
            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-[#c9a227] shadow-[0_0_50px_rgba(201,162,39,0.3)]">
@@ -114,7 +112,6 @@ const HeroSection = () => {
            </div>
         </div>
       </div>
-      </RevealOnScroll>
     </section>
   );
 };
